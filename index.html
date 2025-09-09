@@ -2,41 +2,53 @@
 <html>
   <head>
     <title>Kai's Amazing Website</title>
-     <link rel="stylesheet" href="style.css" />
-     <link rel="icon" type="image/x-icon" href="kfavicon.ico">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/x-icon" href="kfavicon.ico" />
   </head>
 
-  <body>
+  <body class="bg-blue-50 text-gray-800 p-4 font-sans">
     <!-- All content goes here -->
-    <div id="all-contents">
-      <nav>
-        <h1>Kai's Amazing Website</h1>
-        <ul id="nav-ul">
-          <li class="nav-li">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="nav-li">
-            <a href="portfolio.html">Portfolio</a>
-          </li>
-        </ul>
+    <div id="all-contents" class="max-w-4xl mx-auto">
+      <nav class="bg-blue-500 p-4 rounded-lg mb-4 shadow-md">
+        <div class="flex justify-between items-center">
+          <h1 class="text-white text-2xl font-bold">Kai's Amazing Website</h1>
+          <ul class="flex space-x-4">
+            <li>
+              <a href="index.html" class="text-white hover:text-blue-200 px-3 py-2 rounded">Home</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="text-white hover:text-blue-200 px-3 py-2 rounded">Portfolio</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
-      <main>
-        <div class="sidebar">
-          <img class="sidebar-img" src="https://static.vecteezy.com/system/resources/thumbnails/066/763/663/small/render-tennis-racket-blue-handle-with-transparent-background-png.png">
-        </div>
+      <main class="bg-white rounded-lg shadow-lg p-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Sidebar with image -->
+          <div class="md:w-1/3">
+            <img
+              class="w-full max-w-xs rounded-lg shadow-md mx-auto"
+              src="https://yt3.googleusercontent.com/WD5iLWfMHryy9I-cIF8oAbyew_ijJsxU071_P5zi0MK7Qc8jaq99v2yW2_SVu7FTRhLVp6yqqrs=s120-c-k-c0x00ffffff-no-rj"
+              alt="Profile picture"
+            />
+          </div>
 
-        <div class="content">
-          <h2>Kai Fleenor</h2>
-          <p>Student at Hammond High</p>
+          <!-- Content section -->
+          <div class="md:w-2/3">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Kai Fleenor</h2>
+            <p class="text-lg text-gray-600 mb-6">10th Grade Student at Hammond High</p>
 
-          <div id="interests">
-            <h3>Interests</h3>
-            <ul>
-              <li>Tennis</li>
-              <li>Coding</li>
-              <li>Video Games</li>
-            </ul>
+            <!-- Interests section -->
+            <div class="border-2 border-gray-300 rounded-lg p-4">
+              <h3 class="text-xl font-semibold mb-3 text-gray-800">My Interests</h3>
+              <ul class="space-y-2">
+                <li class="bg-blue-100 px-3 py-2 rounded text-blue-800">Coding</li>
+                <li class="bg-pink-100 px-3 py-2 rounded text-pink-800">Tennis</li>
+                <li class="bg-green-100 px-3 py-2 rounded text-green-800">Video Games</li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>
