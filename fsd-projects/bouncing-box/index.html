@@ -106,13 +106,14 @@
 
         function handleBoardClick() {
           misclicks++
-          if (misclicks > 20) {
+          if (misclicks > points + 50) {
             endGame()
           }
         }
 
         function endGame() {
           clearInterval(interval);
+          alert('You lost! Try again.')
         }
 
         function update() {
@@ -143,6 +144,9 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+          if (!interval) {
+            return
+          }
           positionX = Math.random() * boardWidth;
           positionY = Math.random() * boardHeight;
           points++;
@@ -160,6 +164,7 @@
           if (points < 30) {
           $(".box").height($(".box").height() * 1.04);
           $(".box").width($(".box").width() * 1.04);
+          $(".box").fontsize($(".box").fontsize() * 1.04);
           getRandomColor(points)
         }
       }
